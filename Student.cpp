@@ -18,7 +18,7 @@ int main()
     cout << "Введите фамилию и инициалы студента: "; cin>> studentName;
     student.setName(studentName);
     student.setMarks();
-    double aver = student.getAver();
+    double aver = student.getAverMark();
     student.print();
     student.printAver();
     _getch();

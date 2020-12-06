@@ -4,7 +4,7 @@
 
 using namespace std;
 
-double Student :: getAver()
+double Student :: Aver()
 {
     double sum = 0;
     for (int i = 0; i < 3; i++) {

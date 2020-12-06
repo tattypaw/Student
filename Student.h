@@ -11,24 +11,16 @@ class Student
 private:
     string name;
     int marks[3];
+    double averMark;
+    double Aver();
+
 public:
     Student() {}
-   /* Student(const string name, const int* marks)
+    double getAverMark()
     {
-        this->name = name;
-        for (int i = 0; i < 3; i++) {
-            Student::marks[i] = marks[i];
-        }
-    } */
-
-    double getAver();
-    /*{
-        double sum = 0;
-        for (int i = 0; i < 3; i++) {
-            sum += marks[i];
-        }
-        return sum / 3;
-    }*/
+        averMark = Aver();
+        return averMark;
+    }
 
     string getName()
     {
@@ -54,27 +46,16 @@ public:
     }
 
     void print();
-    /*{
-        cout << name << endl;
-        cout << "Оценки :";
-        for (int i = 0; i < 3; i++) {
-            cout << setw(4) << marks[i];
-        }
-        cout << endl;
-    }*/
-
+    
     void printAver();
-   /* {
-        cout << "Средняя оценка: " << fixed << setprecision(2) << getAver() << endl;
-    }*/
-
+ 
     void setMarks() {
         cout << "Введите оценки :"<<endl;
         int mark;
         for (int i = 0; i < 3; i++) {
             cout << "Оценка "<<i+1<<" - " << setw(4);
             cin >> mark;
-            setMark(mark,i);
+            setMark(mark, i);
         }
         cout << endl;
     }
